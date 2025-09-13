@@ -64,13 +64,13 @@ data class FraudAlert(
     val orderId: String,
     val customerId: String,
     val reason: String,
-    val severity: FraudServerity,
+    val severity: FraudSeverity,
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     val timestamp: LocalDateTime = LocalDateTime.now()
 
 )
 
-enum class FraudServerity {
+enum class FraudSeverity {
     LOW,
     MEDIUM,
     HIGH,
